@@ -5,5 +5,7 @@
 \par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ has the following activities:
 
 \begin{enumerate}
-    \item Generate a batch of client transactions and send the batch to the 
+    \item Generate a batch of client transactions $T$ and send the batch to a preferred replica $\Replica{}$. 
+    \item Set a timer $t_T$ after sending $T$ to $\Replica{}$.
+    \item Wait for responses from $\f+1$ distinct replicas that claim to have comitted $T$.
 \end{enumerate}
