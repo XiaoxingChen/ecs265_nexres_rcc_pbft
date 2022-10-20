@@ -2,8 +2,8 @@
 
 \subsection{Client}
 
-\par Clients are the generators of transaction requests. There are many existing protocols that aim
-to deal with the single-shard transaction. However, when clients require access to multiple
-shards, existing BFT protocols are facing performance degradation. The Ring-BFT protocol
-aims to reach consensus more efficiently when facing cross-shard transactions.
-In the cross-shard scenario, the client has the following activities:
+\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ has the following activities:
+
+\begin{enumerate}
+    \item Generate a batch of client transactions and send the batch to the 
+\end{enumerate}
