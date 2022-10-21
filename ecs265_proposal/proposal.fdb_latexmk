@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666319703 "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf" "proposal" 1666319704
+["pdflatex"] 1666319703 "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf" "proposal" 1666319709
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.aux" 1666319704 2281 e6ffe3f5596809745d890f9d08198feb ""
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" 1666319384 930 8da110abbe1a131c4f5ecf15bf42dce1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
@@ -207,8 +207,8 @@
   "sec8_membership.tex" 1666306583 174 b76319b063cd3d7039bef53ef999d30c ""
   (generated)
   "proposal.aux"
-  "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.log"
-  "proposal.log"
+  "proposal.out"
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf"
   "proposal.pdf"
-  "proposal.out"
+  "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.log"
+  "proposal.log"

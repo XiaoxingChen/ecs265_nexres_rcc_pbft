@@ -2,9 +2,11 @@
 \section{Key milestones}
 \begin{enumerate}
     \item Environment setup
-    \item Implementation of basic modules (parallelism, ordering, execution) and features
+    \item Implementation of basic modules (commit, total ordering, execution) and features.
     \item Independent test of each individual modules.
     \item Modules integration and basic features test.
-    \item Throughput test and optimization. Benchmark with other consensus protocols.
-    \item Test under collusion attacks
+    \item Experiments for comparison with \PBFT{} (throughput, latency, batching).
+    \item Experiments for the performance of \RCC{} with different concurrent instance numbers, investigating the benefits of concurrent consensus.
+    \item Optimization.
+    \item Test under single crash failure.
 \end{enumerate}
