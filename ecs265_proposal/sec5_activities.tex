@@ -2,10 +2,36 @@
 
 \subsection{Client}
 
-\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ has the following activities:
+\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ generate a batch 
+of client transactions $T$ and send the batch to a preferred replica $\Replica{}$. $Client{}$ sets a timer 
+$t_T$ after sending $T$ to $\Replica{}$ and waits for responses from $\f+1$ distinct replicas that claim 
+to have comitted $T$. After receving sufficient responses, $\Client{}$ counts the latency of each client 
+transaction. $\Client{}$ will complain to other replicas if $\Client{}$ fails to receive $\f+1$ responses 
+before $t_T$ is out.
 
-\begin{enumerate}
-    \item Generate a batch of client transactions $T$ and send the batch to a preferred replica $\Replica{}$. 
-    \item Set a timer $t_T$ after sending $T$ to $\Replica{}$.
-    \item Wait for responses from $\f+1$ distinct replicas that claim to have comitted $T$.
-\end{enumerate}
+\subsection{Primary}
+
+\par The primary $\Primary{i}$ of instance $\Instance{i}$ is the leading role of consensus in the 
+instance. After receiving a client batch $T$, $\Primary{i}$ acts as primary in \PBFT{}, broadcast $T$ 
+with instance id $i$ to other replicas.
+
+\par If $\Primary{i}$ is detected to have faulty behavior for the $k$-th time at round $r$, then the proposals 
+from $\Primary{i}$ will be ignored by other replicas until round $r + 2^k$.
+
+\subsection{Backup Replica}
+
+\par After receiving a proposal $T$ of instance $\Instance{i}$, a non-faulty replica $\Replica{}$ 
+checks the validity of $T$ and if $T$ is proposed by the correct primary $\Primary{i}$. If $T$ is valid, 
+then $\Replica{}$ participates in the \PBFT{} agreement process of $T$.
+
+\par If $\Replica{}$ receives a complaint from client $\Client{}$, then it forwards it to the corresponding 
+primary $\Primary{}$, sets a timer $t_c$, and waits for a corresponding proposal from $\Primary{}$. If $\Replica{}$ 
+fails to receive a corresponding proposal before $t_c$ is out, then $\Primary{}$ is detcted to have faulty behavior. 
+
+\subsection{Total Ordering}
+
+\par Before executing committed client transactions, \RCC{} totally order the committed transactions between different 
+instances. For all committed transactions, \RCC{} execute round by round. In \RCC{} with $\m$ concurrent instances, in 
+each round, \RCC{} execute transactions with increasing instance id, from instance $\Instance{0}$ to instance $\Instance{\m-1}$.
+
+\par 
