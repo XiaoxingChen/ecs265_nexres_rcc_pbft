@@ -3,7 +3,7 @@
 \par To implement \RCC{} with concurrent \PBFT{} instances in Nexres. Four modules are required: \emph{Client, 
 Primary, Backup Replica, Total Ordering}. All modules consists of normal-case algorithms and recovery algorithms. 
 The implementation of normal-case algorithms is of higher priority while the implementation of recovery algorithms 
-is optinonal.
+is optinonal. Also, evaluation that help us assess \RCC{}'s performance is necessary.
 
 \subsection{Client}
 
@@ -41,3 +41,14 @@ stalled as mentioned above.
 \par Before executing committed client transactions, \RCC{} totally order the committed transactions between different 
 instances. For all committed transactions, \RCC{} execute round by round. In \RCC{} with $\m$ concurrent instances, in 
 each round, \RCC{} execute transactions with increasing instance id, from instance $\Instance{0}$ to instance $\Instance{\m-1}$.
+
+\subsection{Evaluation}
+
+\par To evaluate the performace of \RCC{}, we will conduct the following experiments for \RCC{} and \PBFT{}:
+
+\begin{enumerate}
+    \item Best-case Throughput. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different scale.
+    \item Throughput-Latency. Compare the best latency with peak throughput of \RCC{} and \PBFT{} of different scale.
+    \item Batching. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different batchsize.
+    \item Concurrency. Compare the \emph{best-case} throughput of \RCC{} of different instance number.
+\end{enumerate}

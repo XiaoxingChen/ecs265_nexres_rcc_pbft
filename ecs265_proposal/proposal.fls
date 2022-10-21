@@ -1218,10 +1218,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1.tfm
-INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
-INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
-INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
-INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/newtx/nxlmi.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/newtx/LibertineMathMI.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
@@ -1244,6 +1240,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/libertine/LinLibertine
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
+INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
+INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
+INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec6_risks.tex
 INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec7_milestones.tex
 INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec7_milestones.tex
 INPUT /Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/sec7_milestones.tex
