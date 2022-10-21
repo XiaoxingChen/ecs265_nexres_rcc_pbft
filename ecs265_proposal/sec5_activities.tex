@@ -1,5 +1,10 @@
 \section{Activities and tasks}
 
+\par To implement \RCC{} with concurrent \PBFT{} instances in Nexres. Four modules are required: \emph{Client, 
+Primary, Backup Replica, Total Ordering}. All modules consists of normal-case algorithms and recovery algorithms. 
+The implementation of normal-case algorithms is of higher priority while the implementation of recovery algorithms 
+is optinonal.
+
 \subsection{Client}
 
 \par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ generate a batch 
