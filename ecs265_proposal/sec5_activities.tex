@@ -28,10 +28,11 @@ then $\Replica{}$ participates in the \PBFT{} agreement process of $T$.
 primary $\Primary{}$, sets a timer $t_c$, and waits for a corresponding proposal from $\Primary{}$. If $\Replica{}$ 
 fails to receive a corresponding proposal before $t_c$ is out, then $\Primary{}$ is detcted to have faulty behavior. 
 
+\par If $\f+1$ distinct replicas have detected $\Primary{i}$'s faulty behavior, then $\Instance{i}$ will be temporarily 
+stalled as mentioned above.
+
 \subsection{Total Ordering}
 
 \par Before executing committed client transactions, \RCC{} totally order the committed transactions between different 
 instances. For all committed transactions, \RCC{} execute round by round. In \RCC{} with $\m$ concurrent instances, in 
 each round, \RCC{} execute transactions with increasing instance id, from instance $\Instance{0}$ to instance $\Instance{\m-1}$.
-
-\par 
