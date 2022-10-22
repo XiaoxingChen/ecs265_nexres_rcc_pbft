@@ -1,31 +1,30 @@
 \section{Background and Challenges}
-The development of consensus-based data processing frameworks is speedy because they provide more 
-resilience during failures and stronger support for data provenance compared with traditional 
+In the recent years, the development of consensus-based data processing frameworks \cite{pbft, bitcoin, ethereum} has been fast 
+since they provide more resilience during failures and stronger support for data provenance compared with traditional 
 distributed database systems. And consensus protocols are the core of consensus-based systems, 
 which enables independent participants to manage a single common database by reliably and continuously 
 replicating a unique sequence of transactions among all participants. Most practical systems use 
-consensus protocols that follow the classical primary backup design of PBFT. This consensus 
-algorithm works in asynchronous systems and is optimized to be high-performance with an impressive 
-overhead runtime and only a slight increase in latency. Nevertheless, there is an issue of suffering 
-from the limitation of single-replica throughput in traditional primary-backup consensus protocols. 
-To address it, previous work has proposed the idea of concurrent consensus that shows much higher 
-throughput achievement than primary-backup consensus by effectively utilizing all available system 
-resources. Moreover, to push this idea into practice, the RCC paradigm was proposed that turns any 
+consensus protocols that follow the classical-primary backup design of \PBFT{}. \PBFT{} works in asynchronous 
+systems and is optimized to be high-performance. Nevertheless, \PBFT{} suffers 
+from the limitation of bandwidth of primary node since the primary takes much more work compared backup replicas. 
+To address it, previous work has proposed the idea of concurrent consensus that promises to achieve higher throughput 
+than primary-backup consensus by effectively utilizing idle resources in other replicas. Moreover, to 
+push this idea into practice, the \RCC{} paradigm was proposed that turns any 
 primary-backup consensus protocol into a concurrent consensus protocol by running many consensus 
-instances concurrently. The design goals of RCC are:
+instances concurrently. The design goals of \RCC{} \cite{rcc} are:
 \begin{enumerate}
-    \item  RCC provides consensus among replicas on the client transactions to be executed and the order in which they are completed.
-    \item  Clients can interact with RCC to force execution of their transactions and learn the outcome of execution.
-    \item  RCC is a design paradigm that can be applied to any primary-backup consensus protocol, turning it into a concurrent consensus protocol.
-    \item  In RCC, consensus-instances with non-faulty primaries are always able to propose transactions at maximum throughput (with respect to the resources available to any replica), this independent of faulty behavior by any other replica.
-    \item  In RCC, dealing with faulty primaries does not interfere with the operations of other consensus-instances.\\
+    \item  \RCC{} provides consensus among replicas on the client transactions to be executed and the order in which they are completed.
+    \item  Clients can interact with \RCC{} to force execution of their transactions and learn the outcome of execution.
+    \item  \RCC{} is a design paradigm that can be applied to any primary-backup consensus protocol, turning it into a concurrent consensus protocol.
+    \item  In \RCC{}, instances with non-faulty primaries are always able to propose transactions at maximum throughput (with respect to the resources available to any replica), this independent of faulty behavior by any other replica.
+    \item  In \RCC{}, dealing with faulty primaries does not interfere with the operations of other instances.
 \end{enumerate}
 
-\par That is, RCC is designed for maximizing throughput in all cases, even during malicious activity. 
-Furthermore, RCC can make systems more resilient, as it can mitigate the effects of order-based attacks 
+\par That is, \RCC{} is designed for maximizing throughput in all cases, even during malicious activity. 
+Furthermore, \RCC{} can make systems more resilient, as it can mitigate the effects of order-based attacks 
 and throttling attacks.
-With these advantages, RCC has been put to the test by implementing it in \textit{RESILIENTDB}, 
-showing that RCC achieves up to 2.75 times higher throughput than other consensus protocols and 
-can be scaled to 91 replicas. However, the results of the experiments showed that RCC on ResilientDB 
-still has space to improve. Although the results are as expected, it will generate a bottleneck due 
-to the lack of CPU computing capability of RCC implementation. 
+With these advantages, \RCC{} has been put to the test by implementing it in \textit{RESILIENTDB} \cite{gupta2020resilientdb, rahnama2020scalable}, 
+showing that \RCC{} achieves up to 2.75 times higher throughput than other consensus protocols and 
+can be scaled to 91 replicas. However, though the performance results of \RCC{} in \textit{RESILIENTDB} fits 
+the theorectical expectation, the actual bottleneck was CPU computing capability but not network bandwidth. Then, 
+it is of great significance to implement \RCC{} in NexRes and get more convincing performance results.
