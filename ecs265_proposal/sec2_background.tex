@@ -1,12 +1,12 @@
 \section{Background and Challenges}
-In the recent years, the development of consensus-based data processing frameworks \cite{pbft, bitcoin, ethereum} has been fast 
+In recent years, the development of consensus-based data processing frameworks \cite{pbft, bitcoin, ethereum} has been fast 
 since they provide more resilience during failures and stronger support for data provenance compared with traditional 
 distributed database systems. And consensus protocols are the core of consensus-based systems, 
 which enables independent participants to manage a single common database by reliably and continuously 
 replicating a unique sequence of transactions among all participants. Most practical systems use 
 consensus protocols that follow the classical-primary backup design of \PBFT{}. \PBFT{} works in asynchronous 
 systems and is optimized to be high-performance. Nevertheless, \PBFT{} suffers 
-from the limitation of bandwidth of primary node since the primary takes much more work compared backup replicas. 
+from the limitation of bandwidth of the primary node since the primary takes much more work compared to backup replicas. 
 To address it, previous work has proposed the idea of concurrent consensus that promises to achieve higher throughput 
 than primary-backup consensus by effectively utilizing idle resources in other replicas. Moreover, to 
 push this idea into practice, the \RCC{} paradigm was proposed that turns any 
@@ -14,9 +14,9 @@ primary-backup consensus protocol into a concurrent consensus protocol by runnin
 instances concurrently. The design goals of \RCC{} \cite{rcc} are:
 \begin{enumerate}
     \item  \RCC{} provides consensus among replicas on the client transactions to be executed and the order in which they are completed.
-    \item  Clients can interact with \RCC{} to force execution of their transactions and learn the outcome of execution.
+    \item  Clients can interact with \RCC{} to force the execution of their transactions and learn the outcome of execution.
     \item  \RCC{} is a design paradigm that can be applied to any primary-backup consensus protocol, turning it into a concurrent consensus protocol.
-    \item  In \RCC{}, instances with non-faulty primaries are always able to propose transactions at maximum throughput (with respect to the resources available to any replica), this independent of faulty behavior by any other replica.
+    \item  In \RCC{}, instances with non-faulty primaries are always able to propose transactions at maximum throughput (concerning the resources available to any replica), this is independent of faulty behavior by any other replica.
     \item  In \RCC{}, dealing with faulty primaries does not interfere with the operations of other instances.
 \end{enumerate}
 
@@ -26,5 +26,5 @@ and throttling attacks.
 With these advantages, \RCC{} has been put to the test by implementing it in \textit{RESILIENTDB} \cite{gupta2020resilientdb, rahnama2020scalable}, 
 showing that \RCC{} achieves up to 2.75 times higher throughput than other consensus protocols and 
 can be scaled to 91 replicas. However, though the performance results of \RCC{} in \textit{RESILIENTDB} fits 
-the theorectical expectation, the actual bottleneck was CPU computing capability but not network bandwidth. Then, 
+the theoretical expectation, the actual bottleneck was CPU computing capability but not network bandwidth. Then, 
 it is of great significance to implement \RCC{} in NexRes and get more convincing performance results.

@@ -7,17 +7,17 @@ is optinonal. Also, evaluation that help us assess \RCC{}'s performance is neces
 
 \subsection{Client}
 
-\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ generate a batch 
+\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ generates a batch 
 of client transactions $T$ and send the batch to a preferred replica $\Replica{}$. $Client{}$ sets a timer 
 $t_T$ after sending $T$ to $\Replica{}$ and waits for responses from $\f+1$ distinct replicas that claim 
-to have comitted $T$. After receving sufficient responses, $\Client{}$ counts the latency of each client 
+to have committed $T$. After receving sufficient responses, $\Client{}$ counts the latency of each client 
 transaction. $\Client{}$ will complain to other replicas if $\Client{}$ fails to receive $\f+1$ responses 
 before $t_T$ is out.
 
 \subsection{Primary}
 
 \par The primary $\Primary{i}$ of instance $\Instance{i}$ is the leading role of consensus in the 
-instance. After receiving a client batch $T$, $\Primary{i}$ acts as primary in \PBFT{}, broadcast $T$ 
+instance. After receiving a client batch $T$, $\Primary{i}$ acts as primary in \PBFT{}, and broadcast $T$ 
 with instance id $i$ to other replicas.
 
 \par If $\Primary{i}$ is detected to have faulty behavior for the $k$-th time at round $r$, then the proposals 
@@ -31,24 +31,24 @@ then $\Replica{}$ participates in the \PBFT{} agreement process of $T$.
 
 \par If $\Replica{}$ receives a complaint from client $\Client{}$, then it forwards it to the corresponding 
 primary $\Primary{}$, sets a timer $t_c$, and waits for a corresponding proposal from $\Primary{}$. If $\Replica{}$ 
-fails to receive a corresponding proposal before $t_c$ is out, then $\Primary{}$ is detcted to have faulty behavior. 
+fails to receive a corresponding proposal before $t_c$ is out, then $\Primary{}$ is detected to have faulty behavior. 
 
 \par If $\f+1$ distinct replicas have detected $\Primary{i}$'s faulty behavior, then $\Instance{i}$ will be temporarily 
 stalled as mentioned above.
 
 \subsection{Total Ordering}
 
-\par Before executing committed client transactions, \RCC{} totally order the committed transactions between different 
-instances. For all committed transactions, \RCC{} execute round by round. In \RCC{} with $\m$ concurrent instances, in 
-each round, \RCC{} execute transactions with increasing instance id, from instance $\Instance{0}$ to instance $\Instance{\m-1}$.
+\par Before executing committed client transactions, \RCC{} totally orders the committed transactions between different 
+instances. For all committed transactions, \RCC{} executes round by round. In \RCC{} with $\m$ concurrent instances, in 
+each round, \RCC{} executes transactions with increasing instance id, from the instance $\Instance{0}$ to the instance $\Instance{\m-1}$.
 
 \subsection{Evaluation}
 
-\par To evaluate the performace of \RCC{}, we will conduct the following experiments for \RCC{} and \PBFT{}:
+\par To evaluate the performance of \RCC{}, we will conduct the following experiments for \RCC{} and \PBFT{}:
 
 \begin{enumerate}
-    \item Best-case Throughput. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different scale.
-    \item Throughput-Latency. Compare the best latency with peak throughput of \RCC{} and \PBFT{} of different scale.
-    \item Batching. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different batchsize.
-    \item Concurrency. Compare the \emph{best-case} throughput of \RCC{} of different instance number.
+    \item Best-case Throughput. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different scales.
+    \item Throughput-Latency. Compare the best latency with the peak throughput of \RCC{} and \PBFT{} of different scales.
+    \item Batching. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different batch size.
+    \item Concurrency. Compare the \emph{best-case} throughput of \RCC{} of different instance numbers.
 \end{enumerate}
