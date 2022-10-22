@@ -3,7 +3,7 @@ FILE = proposal
 $(FILE).pdf: $(FILE).tex sec1_statement.tex sec2_background.tex
 	pdflatex $(FILE)
 
-newcite: reference.bib $(FILE).pdf 
+newcite: sources.bib $(FILE).pdf 
 	bibtex $(FILE)
 	pdflatex $(FILE)
 	pdflatex $(FILE)
