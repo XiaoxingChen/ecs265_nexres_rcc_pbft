@@ -5,42 +5,29 @@ Primary, Backup Replica, Total Ordering}. All modules consists of normal-case al
 The implementation of normal-case algorithms is of higher priority while the implementation of recovery algorithms 
 is optinonal. Also, evaluation that help us assess \RCC{}'s performance is necessary.
 
-\subsection{Client}
+\subsection{Configuration}
 
-\par Clients are the generators of transaction requests. In \RCC{}, the client $\Client{}$ generates a batch 
-of client transactions $T$ and send the batch to a preferred replica $\Replica{}$. $Client{}$ sets a timer 
-$t_T$ after sending $T$ to $\Replica{}$ and waits for responses from $\f+1$ distinct replicas that claim 
-to have committed $T$. After receving sufficient responses, $\Client{}$ counts the latency of each client 
-transaction. $\Client{}$ will complain to other replicas if $\Client{}$ fails to receive $\f+1$ responses 
-before $t_T$ is out.
+\par Using \PBFT{}, when starting service, servers in NexRes read a configuration file to learn the number of replicas 
+and the original primary. To implement \RCC{}, we need to add the number of instances and corresponding primaries into 
+the configuration file. 
 
-\subsection{Primary}
+\subsection{HeartBeat Message}
 
-\par The primary $\Primary{i}$ of instance $\Instance{i}$ is the leading role of consensus in the 
-instance. After receiving a client batch $T$, $\Primary{i}$ acts as primary in \PBFT{}, and broadcast $T$ 
-with instance id $i$ to other replicas.
+\par Using \PBFT{}, servers in NexRes inform clients of the current primary by sending \emph{HeartBeat} messages to 
+clients. To implement \RCC{}, we need to add the number of instances and corresponding primaries into 
+the \emph{HeartBeat} messages.
 
-\par If $\Primary{i}$ is detected to have faulty behavior for the $k$-th time at round $r$, then the proposals 
-from $\Primary{i}$ will be ignored by other replicas until round $r + 2^k$.
+\subsection{Instance Indentification}
 
-\subsection{Backup Replica}
-
-\par After receiving a proposal $T$ of instance $\Instance{i}$, a non-faulty replica $\Replica{}$ 
-checks the validity of $T$ and if $T$ is proposed by the correct primary $\Primary{i}$. If $T$ is valid, 
-then $\Replica{}$ participates in the \PBFT{} agreement process of $T$.
-
-\par If $\Replica{}$ receives a complaint from client $\Client{}$, then it forwards it to the corresponding 
-primary $\Primary{}$, sets a timer $t_c$, and waits for a corresponding proposal from $\Primary{}$. If $\Replica{}$ 
-fails to receive a corresponding proposal before $t_c$ is out, then $\Primary{}$ is detected to have faulty behavior. 
-
-\par If $\f+1$ distinct replicas have detected $\Primary{i}$'s faulty behavior, then $\Instance{i}$ will be temporarily 
-stalled as mentioned above.
+\par Running concurrent instances, replicas in \RCC{} should be able to identify the instance of each message. 
+To implement this, we need to add a datafield called \emph{instanceid} into the definition of message classes. With 
+such a field, we are able to map messages to correct corresponding instances.
 
 \subsection{Total Ordering}
 
-\par Before executing committed client transactions, \RCC{} totally orders the committed transactions between different 
-instances. For all committed transactions, \RCC{} executes round by round. In \RCC{} with $\m$ concurrent instances, in 
-each round, \RCC{} executes transactions with increasing instance id, from the instance $\Instance{0}$ to the instance $\Instance{\m-1}$.
+\par Before executing committed client transactions, \RCC{} totally orders the committed transactions between 
+different instances.  We need to implement a mechanism to determine the execution order of committed transactions 
+in one round. The simplest one would be ordering based on instance id, from low to high.
 
 \subsection{Evaluation}
 
