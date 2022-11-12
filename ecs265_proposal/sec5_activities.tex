@@ -1,9 +1,9 @@
 \section{Activities and tasks}
 
 \par To implement \RCC{} with concurrent \PBFT{} instances in Nexres. Four modules are required: \emph{Client, 
-Primary, Backup Replica, Total Ordering}. All modules consists of normal-case algorithms and recovery algorithms. 
+Primary, Backup Replica, Total Ordering}. All modules consist of normal-case algorithms and recovery algorithms. 
 The implementation of normal-case algorithms is of higher priority while the implementation of recovery algorithms 
-is optinonal. Also, evaluation that help us assess \RCC{}'s performance is necessary.
+is optional. Also, the evaluation that helps us assess \RCC{}'s performance is necessary.
 
 \subsection{Configuration}
 
@@ -20,12 +20,12 @@ the \emph{HeartBeat} messages.
 \subsection{Instance Indentification}
 
 \par Running concurrent instances, replicas in \RCC{} should be able to identify the instance of each message. 
-To implement this, we need to add a datafield called \emph{instanceid} into the definition of message classes. With 
-such a field, we are able to map messages to correct corresponding instances.
+To implement this, we need to add a data field called \emph{instanceid} into the definition of message classes. With 
+such a field, replicas can to map messages to correct corresponding instances.
 
 \subsection{Total Ordering}
 
-\par Before executing committed client transactions, \RCC{} totally orders the committed transactions between 
+\par Before executing committed client transactions, \RCC{} orders the committed transactions between 
 different instances.  We need to implement a mechanism to determine the execution order of committed transactions 
 in one round. The simplest one would be ordering based on instance id, from low to high.
 
@@ -36,6 +36,6 @@ in one round. The simplest one would be ordering based on instance id, from low 
 \begin{enumerate}
     \item Best-case Throughput. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different scales.
     \item Throughput-Latency. Compare the best latency with the peak throughput of \RCC{} and \PBFT{} of different scales.
-    \item Batching. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different batch size.
+    \item Batching. Compare the \emph{best-case} throughput of \RCC{} and \PBFT{} of different batch sizes.
     \item Concurrency. Compare the \emph{best-case} throughput of \RCC{} of different instance numbers.
 \end{enumerate}
