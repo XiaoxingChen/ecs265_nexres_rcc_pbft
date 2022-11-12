@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex proposal"] 1668238414 "proposal.aux" "proposal.bbl" "proposal" 1668238486
+["bibtex proposal"] 1668238579 "proposal.aux" "proposal.bbl" "proposal" 1668238665
   "/usr/local/texlive/2021/texmf-dist/bibtex/bst/urlbst/plainurl.bst" 1562101090 33034 6f80d55ce824a32ed5562a5220ff287a ""
-  "proposal.aux" 1668238486 3226 7438314a765b7ca5ca952419e4e870a7 "pdflatex"
+  "proposal.aux" 1668238649 3226 ad6a94a8872a78c0bee3acba29836fd7 "pdflatex"
   "sources.bib" 1666404956 35840 e739bb24ff8dd6a6455b1fea52832cdd ""
   (generated)
-  "proposal.bbl"
   "proposal.blg"
-["pdflatex"] 1668238485 "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf" "proposal" 1668238486
-  "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.aux" 1668238486 3226 7438314a765b7ca5ca952419e4e870a7 ""
+  "proposal.bbl"
+["pdflatex"] 1668238648 "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf" "proposal" 1668238665
+  "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.aux" 1668238649 3226 ad6a94a8872a78c0bee3acba29836fd7 ""
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.tex" 1666320681 983 1e069a2653c86a2ff9fd7a00d8f6d07d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -183,22 +183,22 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1639364562 2724740 bdd1f141cbe1be21264e7f6f03349705 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "acmart.cls" 1666308700 116236 4ea561cbc6b8b4aa36b93bfa82f379c7 ""
-  "proposal.aux" 1668238486 3226 7438314a765b7ca5ca952419e4e870a7 "pdflatex"
-  "proposal.bbl" 1668238414 2194 ecfdc52eaf0b81ace1b0c5316923a5f2 "bibtex proposal"
-  "proposal.out" 1668238486 2205 2b70d3cdfdda4250ef29764899b59491 "pdflatex"
+  "proposal.aux" 1668238649 3226 ad6a94a8872a78c0bee3acba29836fd7 "pdflatex"
+  "proposal.bbl" 1668238579 2194 ecfdc52eaf0b81ace1b0c5316923a5f2 "bibtex proposal"
+  "proposal.out" 1668238649 2205 2b70d3cdfdda4250ef29764899b59491 "pdflatex"
   "proposal.tex" 1666320681 983 1e069a2653c86a2ff9fd7a00d8f6d07d ""
   "sec1_statement.tex" 1666410903 974 7c6290235264c51f75c9edd234e2ab29 ""
   "sec2_background.tex" 1666410903 2962 5c02c6e785ddf63b0242300d1eb9f5f8 ""
   "sec3_market.tex" 1666410903 2392 f8f0892b400cb4eeb8bca8998278cd66 ""
-  "sec4_timeline.tex" 1666410903 685 59a583e0dd6f74d4fa46e1eb2d48a218 ""
+  "sec4_timeline.tex" 1668238647 605 b5a770229831838f7909baa8a1725a57 ""
   "sec5_activities.tex" 1668238485 2350 a79e5de9dc08b25034ff749e17078ea5 ""
   "sec6_risks.tex" 1666410903 446 c078b31b99334065edcd526c871dce9a ""
   "sec7_milestones.tex" 1668236681 636 2bcfa650a6b1753052b630900008fd47 ""
   "sec8_membership.tex" 1666306583 174 b76319b063cd3d7039bef53ef999d30c ""
   (generated)
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.log"
-  "proposal.aux"
-  "proposal.pdf"
   "proposal.log"
   "proposal.out"
+  "proposal.pdf"
   "/Users/kdk/Desktop/CourseWork/ECS265/ecs265_nexres_rcc_pbft/ecs265_proposal/proposal.pdf"
+  "proposal.aux"
