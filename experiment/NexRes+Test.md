@@ -130,13 +130,16 @@ BatchSize：400
 /home/ubuntu/resilientdb/config/resdb_config.h#L114，调整batchsize大小
 
 要是RCC跑不成功，详见实验一中调整方法
-
-| BatchSize             | 10   | 50   | 100  | 200  | 400  | 800  |
-| --------------------- | ---- | ---- | ---- | ---- | ---- | ---- |
-| 64 Throughput         |      |      |      |      |      |      |
-| 64 Outgoing Bandwidth |      |      |      |      |      |      |
-| 96 Throughput         |      |      |      |      |      |      |
-| 96 Outgoing Bandwidth |      |      |      |      |      |      |
+| BatchSize                  | 10    | 50    | 100    | 200    | 400    | 800    |
+| -------------------------- | ----- | ----- | ------ | ------ | ------ | ------ |
+| PBFT 64 Throughput         | 15400 | 33250 | 146520 | 26330  | 372960 | 358720 |
+| PBFT 64 Outgoing Bandwidth | 52    | 60    | 252    | 593    | 596    | 596    |
+| PBFT 96 Throughput         | 6466  | 31260 | 72540  | 117200 | 224800 | 198560 |
+| PBFT 96 Outgoing Bandwidth | 44    | 144   | 241    | 410    | 596    | 596    |
+| RCC 64 Throughput          | 74800 | 76160 | 155420 | 241320 | 334640 | 358400 |
+| RCC 64 Outgoing Bandwidth  | 20    | 21    | 23     | 25     | 27     | 24     |
+| RCC 96 Throughput          | 8834  | 22420 | 46080  | 128320 | 336320 | 374800 |
+| RCC 96 Outgoing Bandwidth  | 14    | 15    | 15     | 17     | 21     | 23     |
 
 ### 第五步：实验三，Concurrency
 
@@ -150,21 +153,21 @@ BatchSize：400
 
 BatchSize:100
 
-| Instance Number       | 1     | 4     | 16     | 32     | 64     |        |
-| --------------------- | ----- | ----- | ------ | ------ | ------ | ------ |
-| 64 Throughput         |       |       |        |        |        |        |
-| 64 Outgoing Bandwidth |       |       |        |        |        |        |
-| **Instance Number**   | **1** | **4** | **16** | **32** | **64** | **96** |
-| 96 Throughput         |       |       |        |        |        |        |
-| 96 Outgoing Bandwidth |       |       |        |        |        |        |
+| Instance Number       | 1      | 4      | 16     | 32     | 64     |        |
+| --------------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+| 64 Throughput         | 141180 | 157360 | 134600 | 129980 | 152280 |        |
+| 64 Outgoing Bandwidth | 213    | 53     | 33     | 25     | 22     |        |
+| **Instance Number**   | **1**  | **4**  | **16** | **32** | **64** | **96** |
+| 96 Throughput         | 34560  | 101180 | 75620  | 67040  | 56920  | 48820  |
+| 96 Outgoing Bandwidth | 70     | 48     | 25     | 17     | 15     | 20     |
 
 BatchSize:400
 
-| Instance Number       | 1     | 4     | 16     | 32     | 64     |        |
-| --------------------- | ----- | ----- | ------ | ------ | ------ | ------ |
-| 64 Throughput         |       |       |        |        |        |        |
-| 64 Outgoing Bandwidth |       |       |        |        |        |        |
-| **Instance Number**   | **1** | **4** | **16** | **32** | **64** | **96** |
-| 96 Throughput         |       |       |        |        |        |        |
-| 96 Outgoing Bandwidth |       |       |        |        |        |        |
+| Instance Number       | 1      | 4      | 16     | 32     | 64     |        |
+| --------------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+| 64 Throughput         | 30680  | 431120 | 422400 | 407740 | 317280 |        |
+| 64 Outgoing Bandwidth | 596    | 188    | 58     | 40     | 24     |        |
+| **Instance Number**   | **1**  | **4**  | **16** | **32** | **64** | **96** |
+| 96 Throughput         | 229040 | 142000 | 257600 | 85520  | 94960  | 91280  |
+| 96 Outgoing Bandwidth | 596    | 176    | 48     | 55     | 27     | 23     |
 
