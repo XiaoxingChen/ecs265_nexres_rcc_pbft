@@ -9,24 +9,25 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Number of replicas$(n)$,
-        ylabel= Throughput(txn/s)]
+        ylabel= Throughput(txn/s),
+        legend pos=outer north east]
     \addplot[smooth,mark=*,black] 
         plot coordinates {
             (4,605740)
             (16,538840)
             (32,405280)
             (64,147120)
-            (96,72540)
+            (96,83790)
     };
     \addlegendentry{RCC, Batch=100}
 
     \addplot[smooth,mark=*,red] 
         plot coordinates {
             (4,630080)
-            (16,584640)
-            (32,443120)
-            (64,417200)
-            (96, 224800)
+            (16,549453)
+            (32,510453)
+            (64,383560)
+            (96,221680)
     };
     \addlegendentry{RCC, Batch=400}
 
@@ -57,12 +58,13 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Number of replicas$(n)$,
-        ylabel= Outgoing Bandwidth(MB/s)]
+        ylabel= Outgoing Bandwidth(MB/s),
+        legend pos=outer north east]
 
     \addplot[smooth,color=black,mark=*]
         plot coordinates {
             (4,17)
-            (16,228)
+            (16,30)
             (32,40)
             (64,22)
             (96,19)
@@ -72,9 +74,9 @@
         \addplot[smooth,color=red,mark=*]
         plot coordinates {
             (4,14)
-            (16,236)
-            (32,31)
-            (64,27)
+            (16,19)
+            (32,23)
+            (64,25)
             (96,23)
         };
     \addlegendentry{RCC, Batch=400} 
@@ -108,27 +110,28 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Batch Size,
-        ylabel= Throughput(txn/s)]
+        ylabel= Throughput(txn/s),
+        legend pos = outer north east]
 
     \addplot[smooth,color=black,mark=*]
         plot coordinates {
-            (10,74800)
-            (50,76160)
-            (100,155420)
-            (200,241320)
-            (400,334640)
-            (800,358400)       
+            (10,14721)
+            (50,73218)
+            (100,146177)
+            (200,261113)
+            (400,397324)
+            (800,412352)       
         };
     \addlegendentry{RCC, Replica=64}
 
     \addplot[smooth,color=red,mark=*]
         plot coordinates {
-            (10,8834)
-            (50,22420)
-            (100,46080)
-            (200,128320)
-            (400,336320)
-            (800,374800)       
+            (10,7142)
+            (50,34859)
+            (100,72825)
+            (200,132277)
+            (400,231394)
+            (800,364970)       
         };
     \addlegendentry{RCC, Replica=96}
 
@@ -159,16 +162,17 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Batch Size,
-        ylabel= Outgoing Bandwidth(MB/s)]
+        ylabel= Outgoing Bandwidth(MB/s),
+        legend pos = outer north east]
 
     \addplot[smooth,color=black,mark=*]
         plot coordinates {
             (10,20)
             (50,21)
-            (100,23)
-            (200,25)
+            (100,22)
+            (200,26)
             (400,27)
-            (800,24)       
+            (800,20)       
         };
     \addlegendentry{RCC, Replica=64}
 
@@ -177,9 +181,9 @@
             (10,14)
             (50,15)
             (100,15)
-            (200,17)
-            (400,21)
-            (800,23)       
+            (200,20)
+            (400,22)
+            (800,22)       
         };
     \addlegendentry{RCC, Replica=96}
 
@@ -211,47 +215,48 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Instance Number,
-        ylabel= Throughput(txn/s)]
+        ylabel= Throughput(txn/s),
+        legend pos = outer north east]
 
     \addplot[smooth,color=black,mark=*]
         plot coordinates {
-            (1,141180)
-            (4,157360)
-            (16,134600)
-            (32,129980)
-            (64,152280)       
+            (1,140436)
+            (4,147410)
+            (16,154763)
+            (32,144778)
+            (64,150105)       
         };
     \addlegendentry{Replica=64, Batch=100}
 
     \addplot[smooth,color=red,mark=*]
         plot coordinates {
-            (1,30680)
-            (4,431120)
-            (16,422400)
-            (32,407740)
-            (64,317280)       
+            (1,357300)
+            (4,476135)
+            (16,435782)
+            (32,431417)
+            (64,368793)       
         };
     \addlegendentry{Replica=64, Batch=400}
 
     \addplot[smooth,color=blue,mark=*]
         plot coordinates {
-            (1,34560)
-            (4,101180)
-            (16,75620)
-            (32,67040)
-            (64,56920)
-            (96,48820)
+            (1,71614)
+            (4,72675)
+            (16,76060)
+            (32,75584)
+            (64,76036)
+            (96,72825)
         };
     \addlegendentry{Replica=96, Batch=100}
 
     \addplot[smooth,color= green,mark=*]
         plot coordinates {
-            (1,229040)
-            (4,142000)
-            (16,257600)
-            (32,85520)
-            (64,94960)
-            (96,91280)
+            (1,220426)
+            (4,243120)
+            (16,258184)
+            (32,268039)
+            (64,257071)
+            (96,2468)
         };
     \addlegendentry{Replica=96, Batch=400}
     \end{axis}
@@ -260,46 +265,47 @@
 \begin{tikzpicture}
     \begin{axis}[
         xlabel= Instance Number,
-        ylabel= Outgoing Bandwidth(MB/s)]
+        ylabel= Outgoing Bandwidth(MB/s),
+        legend pos = outer north east]
 
     \addplot[smooth,color=black,mark=*]
         plot coordinates {
-            (1,213)
-            (4,53)
-            (16,33)
-            (32,25)
-            (64,22)       
+            (1,244)
+            (4,81)
+            (16,35)
+            (32,26)
+            (64,24)       
         };
     \addlegendentry{Replica=64, Batch=100}
 
     \addplot[smooth,color=red,mark=*]
         plot coordinates {
             (1,596)
-            (4,188)
-            (16,58)
-            (32,40)
-            (64,24)       
+            (4,212)
+            (16,60)
+            (32,36)
+            (64,25)       
         };
     \addlegendentry{Replica=64, Batch=400}
 
     \addplot[smooth,color=blue,mark=*]
         plot coordinates {
-            (1,70)
-            (4,48)
+            (1,161)
+            (4,62)
             (16,25)
-            (32,17)
-            (64,15) 
-            (96,20)
+            (32,19)
+            (64,17) 
+            (96,16)
         };
     \addlegendentry{Replica=96, Batch=100}
 
     \addplot[smooth,color= green,mark=*]
         plot coordinates {
             (1,596)
-            (4,176)
-            (16,48)
-            (32,55)
-            (64,27)
+            (4,202)
+            (16,56)
+            (32,36)
+            (64,26)
             (96,23)
         };
     \addlegendentry{Replica=96, Batch=400}
