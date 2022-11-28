@@ -107,19 +107,19 @@ BatchSize：100
 
 | Replica                 | 4    | 16   | 32   | 64   | 96   |
 | ----------------------- | ---- | ---- | ---- | ---- | ---- |
-| RCC Throughput          |605740|538840|405280|147120|      |
-| RCC Outgoing Bandwidth  |  17  |228   |  40  |  22  |      |
-| PBFT Throughput         |630220|531000|476160|146220|      |
-| PBFT Outgoing Bandwidth | 55   |232   |  383 |  312 |      |
+| RCC Throughput          |605740|538840|405280|147120|83790 |
+| RCC Outgoing Bandwidth  |  17  |30   |  40  |  22  |  19  |
+| PBFT Throughput         |630220|531000|476160|146220|79700 |
+| PBFT Outgoing Bandwidth | 55   |232   |  383 |  312 |  131 |
 
 BatchSize：400
 
 | Replica                 | 4    | 16   | 32   | 64   | 96   |
 | ----------------------- | ---- | ---- | ---- | ---- | ---- |
-| RCC Throughput          |630080|584640|443120|417200|      |
-| RCC Outgoing Bandwidth  |  14  |236   |  31  |  27  |      |
-| PBFT Throughput         |651360|588160|542800|247600|      |
-| PBFT Outgoing Bandwidth | 53   |237   |  445 | 596  |      |
+| RCC Throughput          |630080|549453|510453|383560|221680|
+| RCC Outgoing Bandwidth  |  14  |19    |  23  |  25  |  23  |
+| PBFT Throughput         |651360|588160|542800|247600|239440|
+| PBFT Outgoing Bandwidth | 53   |237   |  445 | 596  | 593  |
 
 ### 第四步：实验二，BatchSize
 
