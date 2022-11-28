@@ -11,7 +11,7 @@
         xlabel= Number of replicas$(n)$,
         ylabel= Throughput(txn/s),
         legend pos=outer north east]
-    \addplot[smooth,mark=*,black] 
+    \addplot[mark=*,black] 
         plot coordinates {
             (4,605740)
             (16,538840)
@@ -21,7 +21,7 @@
     };
     \addlegendentry{RCC, Batch=100}
 
-    \addplot[smooth,mark=*,red] 
+    \addplot[mark=*,red] 
         plot coordinates {
             (4,630080)
             (16,549453)
@@ -31,7 +31,7 @@
     };
     \addlegendentry{RCC, Batch=400}
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (4,630220)
             (16,531000)
@@ -41,7 +41,7 @@
         };
     \addlegendentry{PBFT, Batch=100}
 
-    \addplot[smooth,color=green,mark=*]
+    \addplot[color=green,mark=*]
         plot coordinates {
             (4,651360)
             (16,588160)
@@ -61,7 +61,7 @@
         ylabel= Outgoing Bandwidth(MB/s),
         legend pos=outer north east]
 
-    \addplot[smooth,color=black,mark=*]
+    \addplot[color=black,mark=*]
         plot coordinates {
             (4,17)
             (16,30)
@@ -71,7 +71,7 @@
         };
     \addlegendentry{RCC, Batch=100}
 
-        \addplot[smooth,color=red,mark=*]
+        \addplot[color=red,mark=*]
         plot coordinates {
             (4,14)
             (16,19)
@@ -81,7 +81,7 @@
         };
     \addlegendentry{RCC, Batch=400} 
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (4,55)
             (16,232)
@@ -91,7 +91,7 @@
         };
     \addlegendentry{PBFT, Batch=100} 
 
-    \addplot[smooth,color=green,mark=*]
+    \addplot[color=green,mark=*]
         plot coordinates {
             (4,53)
             (16,237)
@@ -113,7 +113,7 @@
         ylabel= Throughput(txn/s),
         legend pos = outer north east]
 
-    \addplot[smooth,color=black,mark=*]
+    \addplot[color=black,mark=*]
         plot coordinates {
             (10,14721)
             (50,73218)
@@ -124,7 +124,7 @@
         };
     \addlegendentry{RCC, Replica=64}
 
-    \addplot[smooth,color=red,mark=*]
+    \addplot[color=red,mark=*]
         plot coordinates {
             (10,7142)
             (50,34859)
@@ -135,18 +135,18 @@
         };
     \addlegendentry{RCC, Replica=96}
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (10,15400)
             (50,33250)
             (100,146520)
-            (200,26330)
+            (200,263300)
             (400,372960)
             (800,358720)       
         };
     \addlegendentry{PBFT, Replica=64}
 
-    \addplot[smooth,color= green,mark=*]
+    \addplot[color= green,mark=*]
         plot coordinates {
             (10,6466)
             (50,31260)
@@ -165,7 +165,7 @@
         ylabel= Outgoing Bandwidth(MB/s),
         legend pos = outer north east]
 
-    \addplot[smooth,color=black,mark=*]
+    \addplot[color=black,mark=*]
         plot coordinates {
             (10,20)
             (50,21)
@@ -176,7 +176,7 @@
         };
     \addlegendentry{RCC, Replica=64}
 
-    \addplot[smooth,color=red,mark=*]
+    \addplot[color=red,mark=*]
         plot coordinates {
             (10,14)
             (50,15)
@@ -187,7 +187,7 @@
         };
     \addlegendentry{RCC, Replica=96}
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (10,52)
             (50,60)
@@ -198,7 +198,7 @@
         };
     \addlegendentry{PBFT, Replica=64}
 
-    \addplot[smooth,color= green,mark=*]
+    \addplot[color= green,mark=*]
         plot coordinates {
             (10,44)
             (50,144)
@@ -218,7 +218,7 @@
         ylabel= Throughput(txn/s),
         legend pos = outer north east]
 
-    \addplot[smooth,color=black,mark=*]
+    \addplot[color=black,mark=*]
         plot coordinates {
             (1,140436)
             (4,147410)
@@ -228,7 +228,7 @@
         };
     \addlegendentry{Replica=64, Batch=100}
 
-    \addplot[smooth,color=red,mark=*]
+    \addplot[color=red,mark=*]
         plot coordinates {
             (1,357300)
             (4,476135)
@@ -238,7 +238,7 @@
         };
     \addlegendentry{Replica=64, Batch=400}
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (1,71614)
             (4,72675)
@@ -249,7 +249,7 @@
         };
     \addlegendentry{Replica=96, Batch=100}
 
-    \addplot[smooth,color= green,mark=*]
+    \addplot[color= green,mark=*]
         plot coordinates {
             (1,220426)
             (4,243120)
@@ -268,7 +268,7 @@
         ylabel= Outgoing Bandwidth(MB/s),
         legend pos = outer north east]
 
-    \addplot[smooth,color=black,mark=*]
+    \addplot[color=black,mark=*]
         plot coordinates {
             (1,244)
             (4,81)
@@ -278,7 +278,7 @@
         };
     \addlegendentry{Replica=64, Batch=100}
 
-    \addplot[smooth,color=red,mark=*]
+    \addplot[color=red,mark=*]
         plot coordinates {
             (1,596)
             (4,212)
@@ -288,7 +288,7 @@
         };
     \addlegendentry{Replica=64, Batch=400}
 
-    \addplot[smooth,color=blue,mark=*]
+    \addplot[color=blue,mark=*]
         plot coordinates {
             (1,161)
             (4,62)
@@ -299,7 +299,7 @@
         };
     \addlegendentry{Replica=96, Batch=100}
 
-    \addplot[smooth,color= green,mark=*]
+    \addplot[color= green,mark=*]
         plot coordinates {
             (1,596)
             (4,202)
