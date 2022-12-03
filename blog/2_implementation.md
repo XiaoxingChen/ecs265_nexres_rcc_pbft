@@ -1,8 +1,10 @@
 ## Part 2. Implementation
 
+In this section, we will give an overview of implementation. To implement RCC with concurrent instances in Nexres, four modules are required: *Client, Primary, Backup Replica, Total Ordering*. All modules consist of normal-case algorithms and recovery algorithms. The implementation of normal-case algorithms is of higher priority while the implementation of recovery algorithms is optiopnal. Also, the evaluation that helps us assess the performance of RCC is necessary. 
+
 #### Configuration
 
-To implement RCC in NexRes, we need to make changes in the configutation file first. When starting service in NexRes, it will read a configuration file to learn the number of replicas and the original primary. Thus, we need to specify the number of instances and the primaries in the configuration file.
+To implement RCC in NexRes, first we need to make changes in the configutation file. When starting service in NexRes, it will read a configuration file to learn the number of replicas and the original primary. Thus, we need to specify the number of instances and the primaries in the configuration file.
 
 #### Server and Client
 
