@@ -130,16 +130,16 @@ BatchSize：800
 /home/ubuntu/resilientdb/config/resdb_config.h#L114，调整batchsize大小
 
 要是RCC跑不成功，详见实验一中调整方法
-| BatchSize                  | 50    | 100    | 200    | 400    | 800    |
-| -------------------------- | ----- | ------ | ------ | ------ | ------ |
-| PBFT 64 Throughput         | 33250 | 146520 | 264806 | 374640 | 376186 |
-| PBFT 64 Outgoing Bandwidth | 60    | 252    | 430    | 596    | 596    |
-| PBFT 96 Throughput         | 31260 | 72540  | 117200 | 224800 | 247093 |
-| PBFT 96 Outgoing Bandwidth | 144   | 241    | 410    | 596    | 596    |
-| RCC 64 Throughput          | 73218 | 146177 | 260033 | 411146 | 434773 |
-| RCC 64 Outgoing Bandwidth  | 21    | 22     | 24     | 29     | 20     |
-| RCC 96 Throughput          | 34859 | 72825  | 132277 | 239394 | 373840 |
-| RCC 96 Outgoing Bandwidth  | 15    | 16     | 20     | 20     | 21     |
+| BatchSize                  | 50    | 100    | 200    | 400    | 800    | 1200   |
+| -------------------------- | ----- | ------ | ------ | ------ | ------ | ------ |
+| PBFT 64 Throughput         | 33250 | 146520 | 264806 | 374640 | 376186 |        |
+| PBFT 64 Outgoing Bandwidth | 60    | 252    | 430    | 596    | 596    |        |
+| PBFT 96 Throughput         | 31260 | 72540  | 117200 | 224800 | 247093 | 247720 |
+| PBFT 96 Outgoing Bandwidth | 144   | 241    | 410    | 596    | 596    |  596   |
+| RCC 64 Throughput          | 73218 | 146177 | 260033 | 396520 | 434773 |        |
+| RCC 64 Outgoing Bandwidth  | 21    | 22     | 24     | 24     | 20     |        |
+| RCC 96 Throughput          | 34859 | 72825  | 132277 | 239394 | 373840 | 397840 | 
+| RCC 96 Outgoing Bandwidth  | 15    | 16     | 20     | 20     | 21     |  19    |
 
 ### 第五步：实验三，Concurrency
 
